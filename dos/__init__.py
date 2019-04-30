@@ -25,10 +25,10 @@ def dos_distribute(url, times, workers, *args, **kwargs):
 def dos_work(url, times, *args, **kwargs):
 
     def f(url):
+        print url
         get(url)
 
     for _ in range(times):
-        print "a"
         Thread(target=f, args=(url,)).start()
 
     return {"status": "success"}
