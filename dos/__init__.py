@@ -28,6 +28,7 @@ def dos_work(url, times, *args, **kwargs):
         get(url)
 
     for _ in range(times):
+        print "a"
         Thread(target=f, args=(url,))
 
     return {"status": "success"}
