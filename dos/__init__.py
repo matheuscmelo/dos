@@ -30,6 +30,7 @@ def dos_work(url, times, *args, **kwargs):
     for _ in range(times):
         Thread(target=f, args=(url,))
 
+    return {"status": "success"}
 
 class DosRefresherPlugin(object):
     ACTIONS = {"dos": dos_distribute}
