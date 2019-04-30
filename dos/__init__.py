@@ -29,7 +29,7 @@ def dos_work(url, times, *args, **kwargs):
 
     for _ in range(times):
         print "a"
-        Thread(target=f, args=(url,))
+        Thread(target=f, args=(url,)).start()
 
     return {"status": "success"}
 
